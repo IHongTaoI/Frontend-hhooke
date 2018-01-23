@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<!--actionbar-->
+<div id="action_bar">
+    <img id="back_button" src="https://img.xmiles.cn/toutiao/image/miles_service_coin_center_icon_back.png"/>
+    <span id="action_bar_title">我的零钱</span>
+    <div class="bLine"></div>
+</div>
+
+<script type="text/javascript">
+	function setiOSBackIcon() {
+            if (xmkit.isIOS()) {
+                $('#action_bar').hide();
+                $('body').css('padding-top','0');
+                return;
+                $("#action_bar").addClass("ios_action_bar");
+                $("#back_button").addClass("ios_back_button");
+                $("#back_button").attr("src", "https://img.xmiles.cn/toutiao/image/miles_service_coin_center_icon_back.png");
+                $("#action_bar_title").addClass("ios_action_bar_title");
+                $("#right_menu_text").addClass("ios_right_menu_text");
+            } else {
+                $("#action_bar").addClass("android_action_bar");
+                $("#back_button").addClass("android_back_button");
+                $("#back_button").attr("src", "https://img.xmiles.cn/toutiao/image/miles_service_coin_center_icon_back.png");
+                $("#action_bar_title").addClass("android_action_bar_title");
+                $("#right_menu_text").addClass("android_right_menu_text")
+            }
+            $("#back_button").show();
+            $("#action_bar_title").show()
+        }
+        setiOSBackIcon();
+        $('#back_button').on('click',function(){
+            platform_finishSelf();
+        });
+</script>
+</body>
+</html>
