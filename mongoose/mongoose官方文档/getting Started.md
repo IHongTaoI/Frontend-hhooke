@@ -48,9 +48,17 @@ var userSchema = mongoose.Schema({
 目前一切都很顺利，我们有了一个带有属性的 Schema “name” , 他是一个字符串 , 下一步我们将Schema 编译成Model。
 
 ```javascript
-var user = mongoose.model('user', UserSchema)
+var User = mongoose.model('user', UserSchema)
 
-var silence = new Kitten({ name: 'Silence' })
-console.log(silence.name) // 'Silence'
+var hongtao = new User({ name: 'hongtao' })
+console.log(hongtao.name) // 'Silence'
 ```
 
+接下来就是将这条数据保存到数据库中，调用save() 方法保存.
+
+```javascript
+hongtao.save((err, data)=>{
+    if(err) console.log(err);
+    console.log(data);
+})
+```
