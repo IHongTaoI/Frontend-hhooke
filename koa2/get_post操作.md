@@ -36,3 +36,15 @@ router.post('/c', async(ctx, next) => {
      // return  await ctx.render('index')
 })
 ```
+
+> 需要注意的是  要拿到post的数据，先安装body-parser模块
+```javascript
+const bodyparser = require('body-parser')
+
+// middlewares
+app.use(bodyparser({
+    enableTypes:['json', 'form', 'text']
+}))
+
+// 一般只用开启json就行了
+```
