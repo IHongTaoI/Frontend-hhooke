@@ -3,8 +3,8 @@
 Quokka 是一个调试工具插件，能够根据你正在编写的代码提供实时反馈。它易于配置，并能够预览变量的函数和计算值结果。另外，在使用 JSX 或 TypeScript 项目中，它能够开箱即用。
 
 ## Path Intellisense
-自动路劲补全，默认不带这个功能的，赶紧装
 ![Alt text](https://segmentfault.com/img/bVCgnp)
+自动路劲补全，默认不带这个功能的，赶紧装
 
 
 ## HTML Snippets
