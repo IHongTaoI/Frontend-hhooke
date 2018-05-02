@@ -21,3 +21,12 @@ Quokka 是一个调试工具插件，能够根据你正在编写的代码提供�
 ![Alt text](https://segmentfault.com/img/bVCgBn)
 修改 html 标签，自动帮你完成尾部闭合标签的同步修改，不过有些bug。
 
+
+# Vue插件
+
+
+## vetur
+语法高亮、智能感知、Emmet等
+
+## VueHelper
+snippet代码片段
