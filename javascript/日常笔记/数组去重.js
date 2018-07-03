@@ -58,5 +58,3 @@ function arrFliter5(arr) {
     let aSet = new Set(arr);
     return Array.from(aSet);
 }
-
-console.log(arrFliter5(arr));
