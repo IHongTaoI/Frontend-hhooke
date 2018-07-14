@@ -14,3 +14,4 @@
   a.fn2()//error : a.fn2 is not a function
   A.fn2()// 静态方法，实例不可调用
 ```
+# ES6 class的继承使用细节>>>请转向->日常笔记->18-7-4
