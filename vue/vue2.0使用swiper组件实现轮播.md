@@ -6,10 +6,10 @@
 
 2.引用组件
 
- ```javascript
+```javascript
 import Swiper from 'swiper';
 import 'swiper/dist/css/swiper.min.css';
- ```
+```
 
 3.html页面代码
 ```html
@@ -31,10 +31,10 @@ import 'swiper/dist/css/swiper.min.css';
 ```javascript
  setTimeout(function () {
     state.swiperObj =  new Swiper('#swiper', {
-    loop: true,
-    pagination: '.swiper-pagination',
-    autoplay: 2000,
-    paginationClickable: true
+        loop: true,
+        pagination: '.swiper-pagination',
+        autoplay: 2000,
+        paginationClickable: true
     });
 }, 100)
 ```
