@@ -96,10 +96,10 @@
     }
     //创建纯函数的缓存版本
     function cached(fn) {
-        var cache = Object.create(null);
-        return (function cachedFn(str) {
-            var hit = cache[str];
-            return hit || (cache[str] = fn(str))
+        var cache = Object.create(null);//创建一个缓存对象
+        return (function cachedFn(str) {//返回一个函数
+            var hit = cache[str];//以函数的参数为键
+            return hit || (cache[str] = fn(str))//如果缓存对象中存在这个键，那么就从缓存中返回这个函数，如果没有就把这个函数赋值到缓存对象中并且返回
         })
     }
 
