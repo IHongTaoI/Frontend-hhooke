@@ -203,7 +203,6 @@
                     : fn.call(ctx, a)
                 : fn.call(ctx)
         }
-
         boundFn._length = fn.length;
         return boundFn
     }
