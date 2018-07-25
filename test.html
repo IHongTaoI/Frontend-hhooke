@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
-
 <body>
-    <script>
-        
-        window.addEventListener("popstate", function (e) {
-            alert("我监听到了浏览器的返回按钮事件啦");//根据自己的需求实现自己的功能 
-        }, false);
-
-
-    </script>
+  <style>
+    .img { display:block; position: relative; width:800px; height:450px; margin:0 auto;}
+.img:before { content: ""; position: absolute; width:200px; height: 100%; top: 0; left: -150px; overflow: hidden;
+background: -moz-linear-gradient(left, rgba(255,255,255,0)0, rgba(255,255,255,.2)50%, rgba(255,255,255,0)100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(50%, rgba(255,255,255,.2)), color-stop(100%, rgba(255,255,255,0)));
+background: -webkit-linear-gradient(left, rgba(255,255,255,0)0, rgba(255,255,255,.2)50%, rgba(255,255,255,0)100%);
+background: -o-linear-gradient(left, rgba(255,255,255,0)0, rgba(255,255,255,.2)50%, rgba(255,255,255,0)100%);
+-webkit-transform: skewX(-25deg);
+-moz-transform: skewX(-25deg)
+}
+.img:hover:before { left: 150%; transition: left 1s ease 0s; }
+  </style>
+  <a href="#" class="img"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532520162214&di=71283c9527adec2c838d0a91992c11b5&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F015bb95541d459000001154130c98f.jpg%40900w_1l_2o_100sh.jpg" width="800"></a>
 </body>
-
 </html>
