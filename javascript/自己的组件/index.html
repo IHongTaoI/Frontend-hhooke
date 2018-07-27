@@ -1,18 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./HUI.css">
+    <style>
+        .warp {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: flex-start;
+            width: 500px;
+            height: 500px;
+            padding: 20px;
+            background: seagreen;
+            margin: 150px auto;
+
+        }
+
+        .warp .item {
+            width: 50px;
+            height: 50px;
+            margin: 40px;
+            background: sienna;
+        }
+
+        .warp .img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
 </head>
+
 <body>
+    <div class="warp">
+
+    </div>
+    <script src="./HUI.js"></script>
     <script>
-        
-        
-        
-        
-        
+        var data = [
+            {
+                text: '123',
+                src: 'https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-f0b91d6f9753a2cf-9fb4d606d750ecb83231b016ed7b5fd3.jpg'
+            }, {
+                text: '123',
+                src: 'https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-f0b91d6f9753a2cf-9fb4d606d750ecb83231b016ed7b5fd3.jpg'
+            }, {
+                text: '123',
+                src: 'https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-f0b91d6f9753a2cf-9fb4d606d750ecb83231b016ed7b5fd3.jpg'
+            }, {
+                text: '123',
+                src: 'https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-f0b91d6f9753a2cf-9fb4d606d750ecb83231b016ed7b5fd3.jpg'
+            }, {
+                text: '123',
+                src: 'https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-f0b91d6f9753a2cf-9fb4d606d750ecb83231b016ed7b5fd3.jpg'
+            }, {
+                text: '123',
+                src: 'https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-f0b91d6f9753a2cf-9fb4d606d750ecb83231b016ed7b5fd3.jpg'
+            }, {
+                text: '123',
+                src: 'https://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-f0b91d6f9753a2cf-9fb4d606d750ecb83231b016ed7b5fd3.jpg'
+            },
+        ];
+
+        var HUI = function (cfg) {
+            if (!cfg) new Error('请传入配置')
+            this.cfg = cfg;
+        }
+
+        HUI.prototype.bounce = function () {
+            if (!this.cfg.el) new Error('参数el 未传')
+            if (!this.cfg.random) new Error('参数random 未传')
+            if (!this.cfg.data) new Error('参数data 未传')
+            var config = {
+                el: document.getElementById(this.cfg.el),
+                random: this.cfg.random,
+                data: this.cfg.data
+            };
+        }
+
+
+        // for (var i = 0; i < data.length; i++) {
+        //     var dom = document.createElement('div')
+        //     dom.className = 'item ht-bounce';
+        //     document.querySelector('.warp').appendChild(dom);
+        // }
+
+
+
+
     </script>
 </body>
+
 </html>
