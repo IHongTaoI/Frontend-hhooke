@@ -1,4 +1,7 @@
-//声明了Object的key
-let o2: { key: string } = {
-    key: '111'
+class People {
+    name
+    age
+    protected weight
+    const
+
 }
