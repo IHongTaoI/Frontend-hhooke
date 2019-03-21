@@ -12,6 +12,8 @@
 
 ## [数据结构](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/javascript/数据结构/index.md)
 
+## [算法系列](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/javascript/算法/index.md)
+
 ## 其他
 
 - [前端调试](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/其他/前端调试.md)
