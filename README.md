@@ -4,7 +4,7 @@
 
 放上本人项目地址 [吾心飞享](http://www.hhooke.cn)
 
-## [CSS系列](https://github.com/IHongTaoI/study_everyday_note/blob/master/css/index.md)
+## [CSS系列](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/css/index.md)
 
 ## [flowJs系列](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/flowJs系列/index.md)
 
