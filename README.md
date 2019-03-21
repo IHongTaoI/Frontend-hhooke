@@ -10,4 +10,4 @@
 
 [打包问题记录](https://github.com/IHongTaoI/study_everyday_note/blob/master/webpack/%E6%89%93%E5%8C%85%E9%97%AE%E9%A2%98.md "webpack")
 
-## [CSS系列](http://www.hhooke.cn)
+## [CSS系列](https://github.com/IHongTaoI/study_everyday_note/blob/master/css/index.md)
