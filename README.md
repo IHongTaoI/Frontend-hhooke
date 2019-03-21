@@ -10,6 +10,8 @@
 
 ## [设计模式](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/javascript/设计模式/index.md)
 
+## [数据结构](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/javascript/数据结构/index.md)
+
 ## 其他
 
 - [前端调试](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/其他/前端调试.md)
