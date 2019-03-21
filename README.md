@@ -16,6 +16,8 @@
 
 ## [前端面试系列](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/面试/index.md)
 
+## [javascript基础](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/javascript/基础/index.md)
+
 ## 其他
 
 - [前端调试](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/其他/前端调试.md)
