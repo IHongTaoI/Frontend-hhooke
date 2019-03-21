@@ -13,3 +13,5 @@
 ## [CSS系列](https://github.com/IHongTaoI/study_everyday_note/blob/master/css/index.md)
 
 ## [flowJs系列](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/flowJs系列/index.md)
+
+### [前端调试](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/调试/前端调试.md)
