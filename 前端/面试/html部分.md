@@ -1,14 +1,26 @@
-- <a href="#DOCTYPE1">DOCTYPE 有什么用</a>
-- <a href="#DOCTYPE">HTML5 为什么只需要写`<!DOCTYPE HTML>`</a>
-- <a href="#script">script、script async 和 script defer 的区别</a>
-- <a href="#script2">为什么最好把 css 的 link 标签放在 head 标签中，而把 js 的 script 标签放在 body 标签前</a>
-- <a href="#img">img 元素的 srcset 属性</a>
-- <a href="#d1">什么是渐进式渲染</a>
-- <a href="#d2">行内元素有哪些？块级元素有哪些？空(void)元素有那些？</a>
-- <a href="#d3">常见的浏览器内核有哪些</a>
-- <a href="#d4">介绍一下你对浏览器内核的理解</a>
-- <a href="#d5">如何实现浏览器内多个标签页之间的通信?(阿里)</a>
-- <a href="#d6">webSocket 如何兼容低浏览器</a>
+<a name="TOC" id="TOC"></a>
+
+- **标签相关**
+  - <a href="#DOCTYPE1">DOCTYPE 有什么用</a>
+  - <a href="#DOCTYPE">HTML5 为什么只需要写`<!DOCTYPE HTML>`</a>
+  - <a href="#script">script、script async 和 script defer 的区别</a>
+  - <a href="#d8">简述一下你对 HTML 语义化的理解</a>
+  - <a href="#d2">行内元素有哪些？块级元素有哪些？空(void)元素有那些？</a>
+  - <a href="#script2">为什么最好把 css 的 link 标签放在 head 标签中，而把 js 的 script 标签放在 body 标签前</a>
+- **浏览器内核**
+  - <a href="#d1">什么是渐进式渲染</a>
+  - <a href="#d3">常见的浏览器内核有哪些</a>
+  - <a href="#d4">介绍一下你对浏览器内核的理解</a>
+- **离线缓存**
+  - <a href="#d9">HTML5 的离线储存怎么使用</a>
+  - <a href="#d10">浏览器是怎么对 HTML5 的离线储存资源进行管理和加载的呢</a>
+- **其他**
+  - <a href="#d7">link 和 @import</a>
+  - <a href="#d5">如何实现浏览器内多个标签页之间的通信?(阿里)</a>
+  - <a href="#img">img 元素的 srcset 属性</a>
+  - <a href="#d6">webSocket 如何兼容低浏览器</a>
+  - <a href="#d11">iframe 有那些缺点</a>
+  - <a href="#d12">页面可见性</a>
 
 <a name="DOCTYPE1" id="DOCTYPE1"></a>
 
@@ -29,6 +41,8 @@
 
 ## HTML5 为什么只需要写`<!DOCTYPE HTML>`
 
+> <a href="#TOC">目录</a>
+
 HTML5 不基于 SGML，因此不需要对 DTD 进行引用，但是需要 doctype 来规范浏览器的行为（让浏览器按照它们应该的方式来运行）；而 HTML4.01 基于 SGML,所以需要对 DTD 进行引用，才能告知浏览器文档所使用的文档类型。
 
 # cookie，session，sessionStorage，localStorage 对比
@@ -46,6 +60,8 @@ HTML5 不基于 SGML，因此不需要对 DTD 进行引用，但是需要 doctyp
 
 # `<script>`、`<script async>`和`<script defer>`的区别
 
+> <a href="#TOC">目录</a>
+
 - `<script>` : 遇到该标签将导致 HTML 解析中断，然后去提取对应脚本并立即执行，执行结束 HTML 才能继续解析。
 
 * `<script async>` : 遇到该标签 HTML 并不会停止解析，而是与脚本的提取和执行工作同时进行，脚本执行完毕时间不确定，可能在 HTML 解析完成之前或之后，所以只有当脚本与其他脚本独立时才使用该标签，否则可能导致后续脚本访问不到前面脚本情况。
@@ -58,6 +74,8 @@ HTML5 不基于 SGML，因此不需要对 DTD 进行引用，但是需要 doctyp
 
 # 为什么最好把 css 的`<link>`标签放在`<head>`标签中，而把 js 的`<script>`标签放在`</body>`标签前？
 
+> <a href="#TOC">目录</a>
+
 1. css 标签应该放在<head></head>标签之间，因为如果放在</body>标签的前面，那么当 DOM 树构建完成了，渲染树才构建，那么当渲染树构建完成，浏览器不得不再重新渲染整个页面，这样造成了资源的浪费，效率也不高。如果放在<head></head>之间，浏览器边构建边渲染，效率要高的多。将样式表放在文档底部附近一些浏览器会阻止渲染，以避免在页面样式发生变化时，重新绘制页面中的元素。所以将<link>标签放在<head>标签中这种做法可以防止呈现给用户空白的页面或没有样式的内容。
 
 2. 当 js 文件放在<head>中时，浏览器构建 DOM 树的时候遇到 js 文件加载会阻塞，也就是说，浏览器不会加载 body 中的标签，一旦这个 js 文件的数量和内容都比较大，那么就会造成页面空白的情况，导致较差的用户体验。（js 文件之所以会阻塞后续加载是因为在当前 JS 加载和执行完成前，后续所有资源的下载有可能是没必要的）。所以 script 标签最好放在</body>标签的前面，因为放在所有 body 中的标签后面就不会出现网页加载时出现空白的情况，可以持续的给用户提供视觉反馈，同时在有些情况下，会降低错误的发生。
@@ -65,6 +83,8 @@ HTML5 不基于 SGML，因此不需要对 DTD 进行引用，但是需要 doctyp
 <a name="img" id="img"></a>
 
 ## img 元素的 srcset 属性
+
+> <a href="#TOC">目录</a>
 
 ```html
 <img src="small.jpg " srcset="big.jpg 1440w, middle.jpg 800w, small.jpg 1x" />
@@ -113,6 +133,8 @@ body {
 
 ## 行内元素有哪些？块级元素有哪些？空(void)元素有那些？
 
+> <a href="#TOC">目录</a>
+
 首先：CSS 规范规定，每个元素都有 display 属性，确定该元素的类型，每个元素都有默认的 display 值，如 div 的 display 默认值为“block”，则为“块级”元素；span 默认 display 属性值为“inline”，是“行内”元素
 
 1. 行内元素有：a b span img input select strong（强调的语气）
@@ -124,6 +146,8 @@ body {
 <a name="d3" id="d3"></a>
 
 ## 常见的浏览器内核有哪些
+
+> <a href="#TOC">目录</a>
 
 - Trident 内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称 MSHTML]
 
@@ -151,6 +175,8 @@ body {
 
 ## 介绍一下你对浏览器内核的理解
 
+> <a href="#TOC">目录</a>
+
 主要分成两部分：渲染引擎(layoutengineer 或 RenderingEngine)和 JS 引擎。
 
 渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入 CSS 等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。
@@ -170,6 +196,8 @@ JS 引擎则：解析和执行 javascript 来实现网页的动态效果。
 
 ## 如何实现浏览器内多个标签页之间的通信?(阿里)
 
+> <a href="#TOC">目录</a>
+
 WebSocket、SharedWorker；
 
 也可以调用 localstorge、cookies 等本地存储方式；
@@ -186,6 +214,8 @@ localstorge 另一个浏览上下文里被添加、修改或删除时，它都�
 
 ## webSocket 如何兼容低浏览器
 
+> <a href="#TOC">目录</a>
+
 Adobe Flash Socket 、
 
 ActiveX HTMLFile (IE) 、
@@ -193,3 +223,150 @@ ActiveX HTMLFile (IE) 、
 基于 multipart 编码发送 XHR 、
 
 基于长轮询的 XHR
+
+<a name="d7" id="d7"></a>
+
+## 页面导入样式时，使用 link 和@import 有什么区别
+
+> <a href="#TOC">目录</a>
+
+- link 属于 XHTML 标签，除了加载 CSS 外，还能用于定义 RSS,定义 rel 连接属性等作用；而@import 是 CSS 提供的，只能用于加载 CSS;
+
+- 页面被加载的时，link 会同时被加载，而@import 引用的 CSS 会等到页面被加载完再加载;
+
+- import 是 CSS2.1 提出的，只在 IE5 以上才能被识别，而 link 是 XHTML 标签，无兼容问题;
+
+<a name="d8" id="d8"></a>
+
+## 简述一下你对 HTML 语义化的理解
+
+> <a href="#TOC">目录</a>
+
+- html 语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;
+
+- 即使在没有样式 CSS 情况下也以一种文档格式显示，并且是容易阅读的;
+
+- 搜索引擎的爬虫也依赖于 HTML 标记来确定上下文和各个关键字的权重，利于 SEO;
+
+- 使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。
+
+<a name="d9" id="d9"></a>
+
+## HTML5 的离线储存怎么使用
+
+> <a href="#TOC">目录</a>
+
+原理：HTML5 的离线存储是基于一个新建的.appcache 文件的缓存机制(不是存储技术)，通过这个文件上的解析清单离线存储资源，这些资源就会像 cookie 一样被存储了下来。之后当网络在处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示。
+
+使用:
+
+1. 页面头部像下面一样加入一个 manifest 的属性；
+
+2. 在 cache.manifest 文件的编写离线存储的资源；
+
+   ```
+   CACHEMANIFEST
+
+   #v0.11
+
+   CACHE:
+
+   js/app.js
+
+   css/style.css
+
+   NETWORK:
+
+   resourse/logo.png
+
+   FALLBACK:
+
+   //offline.html
+   ```
+
+3. 在离线状态时，操作 window.applicationCache 进行需求实现。
+
+<a name="d10" id="d10"></a>
+
+## 浏览器是怎么对 HTML5 的离线储存资源进行管理和加载的呢
+
+> <a href="#TOC">目录</a>
+
+在线的情况下，浏览器发现 html 头部有 manifest 属性，它会请求 manifest 文件，如果是第一次访问 app，那么浏览器就会根据 manifest 文件的内容下载相应的资源并且进行离线存储。如果已经访问过 app 并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的 manifest 文件与旧的 manifest 文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。
+
+离线的情况下，浏览器就直接使用离线存储的资源。
+
+<a name="d11" id="d11"></a>
+
+## iframe 有那些缺点
+
+> <a href="#TOC">目录</a>
+
+- iframe 会阻塞主页面的 Onload 事件；
+
+- 搜索引擎的检索程序无法解读这种页面，不利于 SEO;
+
+  **动态给 iframe 添加 src 属性值，这样可以绕开以下两个问题。**
+
+- iframe 和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。
+
+- 使用 iframe 之前需要考虑这两个缺点。如果需要使用 iframe，最好是通过 javascript
+
+<a name="d12" id="d12"></a>
+
+## 页面可见性
+
+> <a href="#TOC">目录</a>
+
+通过 visibilityState 的值检测页面当前是否可见，以及打开网页的时间等;
+
+在页面被切换到其他后台进程的时候，自动暂停音乐或视频的播放；
+
+通常我们使用获取页面是否可见会使用到如下的方法。
+
+```js
+// 当前窗口得到焦点
+window.onfocus = function() {
+  // 动画
+  // ajax 轮询等等
+};
+
+// 当前窗口失去焦点
+window.onblur = function() {
+  // 停止动画
+  // 停止 ajax 轮询等等
+};
+```
+
+**但是上面的方法有个缺陷，就是当我们页面并没有隐藏，比如我将鼠标点击页面以外的任何地方，都会触发窗口失去焦点的事件。所以我们比较难知道页面是否真的隐藏了。**
+
+**如果是做的移动端页面，上面的方法就比较可靠**
+
+使用 H5 引入的 Page Visibility API，能够比较好的弥补我们上面所提到的缺陷。
+
+Page Visibility API 本身非常简单，由以下三部分组成。
+
+- document.hidden：表示页面是否隐藏的布尔值。页面隐藏包括 页面在后台标签页中 或者 浏览器最小化（注意，页面被其他软件遮盖并不算隐藏，比如打开的 sublime 遮住了浏览器）
+
+* document.visibilityState：表示下面 4 个可能状态的值
+  - hidden：页面在后台标签页中或者浏览器最小化
+  - visible：页面在前台标签页中
+  - prerender：页面在屏幕外执行预渲染处理 document.hidden 的值为 true
+  - unloaded：页面正在从内存中卸载
+
+- Visibilitychange 事件：当文档从可见变为不可见或者从不可见变为可见时，会触发该事件。
+
+监听 Visibilitychange 事件，当事件触发的时候获取 document.hidden 的值
+
+```js
+document.addEventListener('visibilitychange', function() {
+  var isHidden = document.hidden;
+  if (isHidden) {
+    // 动画停止
+    // 服务器轮询停止 等等
+  } else {
+    // 动画开始
+    // 服务器轮询
+  }
+});
+```
