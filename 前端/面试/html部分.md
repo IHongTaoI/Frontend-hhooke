@@ -1,26 +1,48 @@
-<a name="TOC" id="TOC"></a>
+## 前言
 
-- **标签相关**
-  - <a href="#DOCTYPE1">DOCTYPE 有什么用</a>
-  - <a href="#DOCTYPE">HTML5 为什么只需要写`<!DOCTYPE HTML>`</a>
-  - <a href="#script">script、script async 和 script defer 的区别</a>
-  - <a href="#d8">简述一下你对 HTML 语义化的理解</a>
-  - <a href="#d2">行内元素有哪些？块级元素有哪些？空(void)元素有那些？</a>
-  - <a href="#script2">为什么最好把 css 的 link 标签放在 head 标签中，而把 js 的 script 标签放在 body 标签前</a>
-- **浏览器内核**
-  - <a href="#d1">什么是渐进式渲染</a>
-  - <a href="#d3">常见的浏览器内核有哪些</a>
-  - <a href="#d4">介绍一下你对浏览器内核的理解</a>
-- **离线缓存**
-  - <a href="#d9">HTML5 的离线储存怎么使用</a>
-  - <a href="#d10">浏览器是怎么对 HTML5 的离线储存资源进行管理和加载的呢</a>
-- **其他**
-  - <a href="#d7">link 和 @import</a>
-  - <a href="#d5">如何实现浏览器内多个标签页之间的通信?(阿里)</a>
-  - <a href="#img">img 元素的 srcset 属性</a>
-  - <a href="#d6">webSocket 如何兼容低浏览器</a>
-  - <a href="#d11">iframe 有那些缺点</a>
-  - <a href="#d12">页面可见性</a>
+正所谓面试如考试，考试如战场。战场上必将刀光剑影。
+
+**阅文档，刷试题，只求简历能入围**
+
+**会面试官，戏 HR，一面二面全拿下**
+
+**三年实战，五年经验，项目实战全靠吹**
+
+**等通知，等通知，（此处不知道写什么了）**
+
+小生不才，没有更好的文采献给大家。我们就直接切入正题。《前端面试之 html 篇》
+
+---
+
+<a name="TOC" id="TOC"></a>
+| 目录 |
+| ---- |
+|**标签相关**|
+| [DOCTYPE 有什么用](#DOCTYPE1)|
+| [HTML5 为什么只需要写`<!DOCTYPE HTML>`](#DOCTYPE)|
+| [script、script async 和 script defer 的区别](#script)|
+| [简述一下你对 HTML 语义化的理解](#d8)|
+| [行内元素有哪些？块级元素有哪些？空(void)元素有那些？](#d2)|
+| [为什么最好把 css 的 link 标签放在 head 标签中，而把 js 的 script 标签放在 body 标签前](#script2)|
+|**浏览器内核**|
+| [什么是渐进式渲染](#d1)|
+| [常见的浏览器内核有哪些](#d3)|
+| [介绍一下你对浏览器内核的理解](#d4)|
+|**离线缓存**|
+| [HTML5 的离线储存怎么使用](#d9)|
+| [浏览器是怎么对 HTML5 的离线储存资源进行管理和加载的呢](#d10)|
+| **其他**|
+| [cookie，session，sessionStorage，localStorage 对比](#cookies)|
+| [link 和 @import](#d7)|
+| [如何实现浏览器内多个标签页之间的通信?(阿里)](#d5)|
+| [img 元素的 srcset 属性](#img)|
+| [iframe 有那些缺点](#d6)|
+| [什么是渐进式渲染](#d11)|
+| [页面可见性](#d12)|
+
+## 引言
+
+---
 
 <a name="DOCTYPE1" id="DOCTYPE1"></a>
 
@@ -41,11 +63,15 @@
 
 ## HTML5 为什么只需要写`<!DOCTYPE HTML>`
 
-> <a href="#TOC">目录</a>
+> [目录](#TOC)
 
 HTML5 不基于 SGML，因此不需要对 DTD 进行引用，但是需要 doctype 来规范浏览器的行为（让浏览器按照它们应该的方式来运行）；而 HTML4.01 基于 SGML,所以需要对 DTD 进行引用，才能告知浏览器文档所使用的文档类型。
 
-# cookie，session，sessionStorage，localStorage 对比
+<a name="cookies" id="cookies"></a>
+
+## cookie，session，sessionStorage，localStorage 对比
+
+> [目录](#TOC)
 
 | 操作/名        | session                                             | cookie                                                                      | sessionStorage                                                                     | localStorage |
 | -------------- | --------------------------------------------------- | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------ |
@@ -60,7 +86,7 @@ HTML5 不基于 SGML，因此不需要对 DTD 进行引用，但是需要 doctyp
 
 # `<script>`、`<script async>`和`<script defer>`的区别
 
-> <a href="#TOC">目录</a>
+> [目录](#TOC)
 
 - `<script>` : 遇到该标签将导致 HTML 解析中断，然后去提取对应脚本并立即执行，执行结束 HTML 才能继续解析。
 
@@ -74,7 +100,7 @@ HTML5 不基于 SGML，因此不需要对 DTD 进行引用，但是需要 doctyp
 
 # 为什么最好把 css 的`<link>`标签放在`<head>`标签中，而把 js 的`<script>`标签放在`</body>`标签前？
 
-> <a href="#TOC">目录</a>
+> [目录](#TOC)
 
 1. css 标签应该放在<head></head>标签之间，因为如果放在</body>标签的前面，那么当 DOM 树构建完成了，渲染树才构建，那么当渲染树构建完成，浏览器不得不再重新渲染整个页面，这样造成了资源的浪费，效率也不高。如果放在<head></head>之间，浏览器边构建边渲染，效率要高的多。将样式表放在文档底部附近一些浏览器会阻止渲染，以避免在页面样式发生变化时，重新绘制页面中的元素。所以将<link>标签放在<head>标签中这种做法可以防止呈现给用户空白的页面或没有样式的内容。
 
@@ -84,7 +110,7 @@ HTML5 不基于 SGML，因此不需要对 DTD 进行引用，但是需要 doctyp
 
 ## img 元素的 srcset 属性
 
-> <a href="#TOC">目录</a>
+> [目录](#TOC)
 
 ```html
 <img src="small.jpg " srcset="big.jpg 1440w, middle.jpg 800w, small.jpg 1x" />
@@ -133,7 +159,7 @@ body {
 
 ## 行内元素有哪些？块级元素有哪些？空(void)元素有那些？
 
-> <a href="#TOC">目录</a>
+> [目录](#TOC)
 
 首先：CSS 规范规定，每个元素都有 display 属性，确定该元素的类型，每个元素都有默认的 display 值，如 div 的 display 默认值为“block”，则为“块级”元素；span 默认 display 属性值为“inline”，是“行内”元素
 
@@ -147,7 +173,7 @@ body {
 
 ## 常见的浏览器内核有哪些
 
-> <a href="#TOC">目录</a>
+> [目录](#TOC)
 
 - Trident 内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称 MSHTML]
 
@@ -175,7 +201,7 @@ body {
 
 ## 介绍一下你对浏览器内核的理解
 
-> <a href="#TOC">目录</a>
+> [目录](#TOC)
 
 主要分成两部分：渲染引擎(layoutengineer 或 RenderingEngine)和 JS 引擎。
 
@@ -196,7 +222,7 @@ JS 引擎则：解析和执行 javascript 来实现网页的动态效果。
 
 ## 如何实现浏览器内多个标签页之间的通信?(阿里)
 
-> <a href="#TOC">目录</a>
+> [目录](#TOC)
 
 WebSocket、SharedWorker；
 
@@ -214,7 +240,7 @@ localstorge 另一个浏览上下文里被添加、修改或删除时，它都�
 
 ## webSocket 如何兼容低浏览器
 
-> <a href="#TOC">目录</a>
+> [目录](#TOC)
 
 Adobe Flash Socket 、
 
@@ -228,7 +254,7 @@ ActiveX HTMLFile (IE) 、
 
 ## 页面导入样式时，使用 link 和@import 有什么区别
 
-> <a href="#TOC">目录</a>
+> [目录](#TOC)
 
 - link 属于 XHTML 标签，除了加载 CSS 外，还能用于定义 RSS,定义 rel 连接属性等作用；而@import 是 CSS 提供的，只能用于加载 CSS;
 
@@ -240,7 +266,7 @@ ActiveX HTMLFile (IE) 、
 
 ## 简述一下你对 HTML 语义化的理解
 
-> <a href="#TOC">目录</a>
+> [目录](#TOC)
 
 - html 语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;
 
@@ -254,7 +280,7 @@ ActiveX HTMLFile (IE) 、
 
 ## HTML5 的离线储存怎么使用
 
-> <a href="#TOC">目录</a>
+> [目录](#TOC)
 
 原理：HTML5 的离线存储是基于一个新建的.appcache 文件的缓存机制(不是存储技术)，通过这个文件上的解析清单离线存储资源，这些资源就会像 cookie 一样被存储了下来。之后当网络在处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示。
 
@@ -290,7 +316,7 @@ ActiveX HTMLFile (IE) 、
 
 ## 浏览器是怎么对 HTML5 的离线储存资源进行管理和加载的呢
 
-> <a href="#TOC">目录</a>
+> [目录](#TOC)
 
 在线的情况下，浏览器发现 html 头部有 manifest 属性，它会请求 manifest 文件，如果是第一次访问 app，那么浏览器就会根据 manifest 文件的内容下载相应的资源并且进行离线存储。如果已经访问过 app 并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的 manifest 文件与旧的 manifest 文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。
 
@@ -300,7 +326,7 @@ ActiveX HTMLFile (IE) 、
 
 ## iframe 有那些缺点
 
-> <a href="#TOC">目录</a>
+> [目录](#TOC)
 
 - iframe 会阻塞主页面的 Onload 事件；
 
@@ -316,7 +342,7 @@ ActiveX HTMLFile (IE) 、
 
 ## 页面可见性
 
-> <a href="#TOC">目录</a>
+> [目录](#TOC)
 
 通过 visibilityState 的值检测页面当前是否可见，以及打开网页的时间等;
 
