@@ -17,21 +17,21 @@
 <a name="TOC" id="TOC"></a>
 | 目录 |
 | ---- |
-|**标签相关**|
+|标签相关|
 | [DOCTYPE 有什么用](#DOCTYPE1)|
 | [HTML5 为什么只需要写`<!DOCTYPE HTML>`](#DOCTYPE)|
 | [script、script async 和 script defer 的区别](#script)|
 | [简述一下你对 HTML 语义化的理解](#d8)|
 | [行内元素有哪些？块级元素有哪些？空(void)元素有那些？](#d2)|
 | [为什么最好把 css 的 link 标签放在 head 标签中，而把 js 的 script 标签放在 body 标签前](#script2)|
-|**浏览器内核**|
+|浏览器内核|
 | [什么是渐进式渲染](#d1)|
 | [常见的浏览器内核有哪些](#d3)|
 | [介绍一下你对浏览器内核的理解](#d4)|
-|**离线缓存**|
+|离线缓存|
 | [HTML5 的离线储存怎么使用](#d9)|
 | [浏览器是怎么对 HTML5 的离线储存资源进行管理和加载的呢](#d10)|
-| **其他**|
+| 其他|
 | [cookie，session，sessionStorage，localStorage 对比](#cookies)|
 | [link 和 @import](#d7)|
 | [如何实现浏览器内多个标签页之间的通信?(阿里)](#d5)|
@@ -39,6 +39,7 @@
 | [iframe 有那些缺点](#d6)|
 | [什么是渐进式渲染](#d11)|
 | [页面可见性](#d12)|
+| [DOM 事件流](#d13)|
 
 ## 引言
 
@@ -396,3 +397,9 @@ document.addEventListener('visibilitychange', function() {
   }
 });
 ```
+
+<a name="d13" id="d13"></a>
+
+## DOM 事件流
+
+> [目录](#TOC)
