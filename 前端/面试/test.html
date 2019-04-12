@@ -24,6 +24,30 @@
     </style>
   </head>
   <body>
-    <div class="wrap">123123</div>
+    <div class="p1" data-msg="p1">
+      <div class="c1" data-msg="c1">
+        <div class="c2" data-msg="c2">
+          事件的捕获和冒泡
+        </div>
+      </div>
+    </div>
   </body>
+  <script>
+    var p1 = document.querySelector('.p1');
+    var c1 = document.querySelector('.c1');
+    var c2 = document.querySelector('.c2');
+    p1.addEventListener(
+      'click',
+      function() {
+        console.log(this.getAttribute('data-msg'));
+      },
+      true
+    );
+    c1.onclick = function() {
+      console.log(this.getAttribute('data-msg'));
+    };
+    c2.onclick = function() {
+      console.log(this.getAttribute('data-msg'));
+    };
+  </script>
 </html>

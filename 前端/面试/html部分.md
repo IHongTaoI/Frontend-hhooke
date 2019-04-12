@@ -404,3 +404,31 @@ document.addEventListener('visibilitychange', function() {
 ## DOM 事件流
 
 > [目录](#TOC)
+
+流的概念，在现今的 JavaScript 中随处可见。比如说 React 中的单向数据流，Node 中的流，又或是 DOM 事件流。都是流的一种生动体现。
+
+**事件流之事件冒泡与事件捕获**
+
+事件流分有事件冒泡与事件捕获两种
+
+DOM 事件流的三个阶段：
+
+1. 事件捕获阶段
+
+2. 处于目标阶段
+
+3. 事件冒泡阶段
+
+![](https://mmbiz.qlogo.cn/mmbiz_png/mQf2VP3p6icnC6j4sdsu6yS3r0PPicoNL5NtmVP6qHLFBiciavCUia1c5jEEiaSpmhVP5SqLJic9cEiaV9u2CjLLod7dPQ/0?wx_fmt=png)
+
+**事件捕获阶段**
+
+当事件发生时，首先发生的是事件捕获，为父元素截获事件提供了机会。
+
+**处于目标与事件冒泡阶段**
+
+事件到了具体元素时，在具体元素上发生，并且被看成冒泡阶段的一部分。随后，冒泡阶段发生，事件开始冒泡。
+
+**阻止事件冒泡**
+
+事件冒泡过程，是可以被阻止的。防止事件冒泡而带来不必要的错误和困扰。
