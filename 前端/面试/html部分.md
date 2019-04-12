@@ -84,7 +84,7 @@ HTML5 不基于 SGML，因此不需要对 DTD 进行引用，但是需要 doctyp
 
 <a name="script" id="script"></a>
 
-# `<script>`、`<script async>`和`<script defer>`的区别
+##`<script>`、`<script async>`和`<script defer>`的区别
 
 > [目录](#TOC)
 
@@ -98,7 +98,7 @@ HTML5 不基于 SGML，因此不需要对 DTD 进行引用，但是需要 doctyp
 
 <a name="script2" id="script2"></a>
 
-# 为什么最好把 css 的`<link>`标签放在`<head>`标签中，而把 js 的`<script>`标签放在`</body>`标签前？
+## 为什么最好把 css 的`<link>`标签放在`<head>`标签中，而把 js 的`<script>`标签放在`</body>`标签前？
 
 > [目录](#TOC)
 
