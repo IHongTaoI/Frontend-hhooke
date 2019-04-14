@@ -1,50 +1,72 @@
-[TOC]
+<a id="TOC"></a>
 
-# 写一个js函数，实现对一个数字每3位加一个逗号，如输入100000， 输出100,000（不考虑负数，小数）—百度前端面试题
+| 目录                      |
+| ------------------------- |
+| [数字格式化题(百度)](#d1) |
+| [无重复字符](#d2)         |
+| [大整数相加(腾讯)](#d3)   |
+
+---
+
+<a id="d1"></a>
+
+#### 写一个 js 函数，实现对一个数字每 3 位加一个逗号，如输入 100000， 输出 100,000（不考虑负数，小数）—百度前端面试题
+
+[目录](#TOC)
 
 ```js
-var ret = []
+var ret = [];
 
 function format(arr) {
   if (arr.length > 3) {
-    ret.unshift(arr.slice(-3))
-    format(arr.slice(0, -3))
+    ret.unshift(arr.slice(-3));
+    format(arr.slice(0, -3));
   } else {
-    ret.unshift(arr)
+    ret.unshift(arr);
   }
 }
 
 function main(num) {
-  var gold = '123146161'
+  var gold = '123146161';
 
-  format(gold)
-  console.log(ret.join(','))
+  format(gold);
+  console.log(ret.join(','));
 }
 
-main()
-
+main();
 ```
 
-# 给定一个字符串，找出其中无重复字符的最长子字符串长度
+---
+
+<a id="d2"></a>
+
+#### 给定一个字符串，找出其中无重复字符的最长子字符串长度
+
+[目录](#TOC)
 
 ```js
 var str = 'asgggaaassfagahqqq';
 
 function reStr(str) {
-	let ret = [];
-	for (let v of str) {
-		if (!ret.includes(v)) {
-			ret.push(v);
-		}
-	}
-	console.log(ret.join(''));
+  let ret = [];
+  for (let v of str) {
+    if (!ret.includes(v)) {
+      ret.push(v);
+    }
+  }
+  console.log(ret.join(''));
 }
 
 reStr(str);
-
 ```
 
-# 实现超出整数存储范围的两个大正整数相加—腾讯前端面试题
+---
+
+<a id="d3"></a>
+
+#### 实现超出整数存储范围的两个大正整数相加—腾讯前端面试题
+
+[目录](#TOC)
 
 ```js
 function addBigInt(a, b) {
@@ -70,5 +92,4 @@ function addBigInt(a, b) {
 let ret = addBigInt('2124', '124');
 
 console.log(ret); // 2248
-
 ```
