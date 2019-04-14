@@ -33,21 +33,31 @@
     </div>
   </body>
   <script>
-    var p1 = document.querySelector('.p1');
-    var c1 = document.querySelector('.c1');
-    var c2 = document.querySelector('.c2');
-    p1.addEventListener(
-      'click',
-      function() {
-        console.log(this.getAttribute('data-msg'));
-      },
-      true
-    );
-    c1.onclick = function() {
-      console.log(this.getAttribute('data-msg'));
+    function Father() {
+      this.name = 'father';
+      this.say1 = function() {
+        console.log('say1' + this.name);
+      };
+    }
+    Father.prototype.say2 = function() {
+      console.log('say2' + this.name);
     };
-    c2.onclick = function() {
-      console.log(this.getAttribute('data-msg'));
-    };
+    function Child(name) {
+      Father.call(this);
+      this.name = 'child';
+    }
+    (function() {
+      // 创建一个没有实例方法的类
+      var Super = function() {};
+      Super.prototype = Father.prototype;
+      //将实例作为子类的原型
+      Child.prototype = new Super();
+    })();
+
+    // 修复构造函数指向
+    Child.prototype.constructor = Child;
+    var c1 = new Child();
+    c1.say1(); // say1child
+    c1.say2(); // say2child
   </script>
 </html>
