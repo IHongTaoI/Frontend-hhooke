@@ -16,7 +16,7 @@
 
 <a id="d1"></a>
 
-## 手写 call
+#### 手写 call
 
 [目录](#TOC)
 
@@ -48,7 +48,7 @@ geta.myCall(obj);
 
 <a id="d2"></a>
 
-## 手写 apply
+#### 手写 apply
 
 [目录](#TOC)
 
@@ -85,7 +85,7 @@ geta.myapply(obj);
 
 <a id="d3"></a>
 
-## JS 有哪些手段可以实现继承
+#### JS 有哪些手段可以实现继承
 
 [目录](#TOC)
 

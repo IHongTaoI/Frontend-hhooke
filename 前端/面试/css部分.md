@@ -14,9 +14,11 @@
 | [经常遇到的浏览器的兼容性](#d10)                       |
 | [什么是 CSS 预处理器 / 后处理器](#d11)                 |
 
+---
+
 <a name="d1" id="d1"></a>
 
-### 写出 6 种 css 隐藏元素的方法
+#### 写出 6 种 css 隐藏元素的方法
 
 ```css
 opacity: 0;
@@ -28,9 +30,11 @@ z-index: -99999;
 clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
 ```
 
+---
+
 <a name="d2" id="d2"></a>
 
-### CSS 选择符有哪些？哪些属性可以继承？
+#### CSS 选择符有哪些？哪些属性可以继承？
 
 [目录](#TOC)
 
@@ -50,9 +54,11 @@ clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
 *   不可继承的样式：border padding margin width height ;
 ```
 
+---
+
 <a name="d3" id="d3"></a>
 
-### CSS 优先级算法如何计算
+#### CSS 优先级算法如何计算
 
 [目录](#TOC)
 
@@ -64,9 +70,11 @@ clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
   - 同权重: 内联样式表（标签内部）> 嵌入样式表（当前文件中）> 外部样式表（外部文件中）。
   - !important > id > class > tag (important 比 内联优先级高)
 
+---
+
 <a name="d4" id="d4"></a>
 
-### 关于水平垂直居中
+#### 关于水平垂直居中
 
 [目录](#TOC)
 
@@ -166,9 +174,11 @@ clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
   }
   ```
 
+---
+
 <a name="d5" id="d5"></a>
 
-### css3 新特性
+#### css3 新特性
 
 [目录](#TOC)
 
@@ -183,9 +193,11 @@ clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
 - 缩放,定位,倾斜,动画,多背景
 - 例如:transform:\scale(0.85,0.90)\ translate(0px,-30px)\ skew(-9deg,0deg)\Animation:
 
+---
+
 <a name="d6" id="d6"></a>
 
-### 用纯 CSS 创建一个三角形
+#### 用纯 CSS 创建一个三角形
 
 [目录](#TOC)
 
@@ -199,6 +211,8 @@ clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
 }
 ```
 
+---
+
 <a name="d7" id="d7"></a>
 
 #### 超链接访问过后 hover 样式就不出现的问题如何解决？
@@ -207,9 +221,11 @@ clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
 
 被点击访问过的超链接样式不再具有 hover 和 active 了，解决方式是改变 CSS 属性的排列顺序：L-V-H-A（linked, visited, hover, active）。
 
+---
+
 <a name="d8" id="d8"></a>
 
-### 什么是 Css Hack?ie6,7,8 的 hack 分别是什么
+#### 什么是 Css Hack?ie6,7,8 的 hack 分别是什么
 
 [目录](#TOC)
 
@@ -246,9 +262,11 @@ clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
 }
 ```
 
+---
+
 <a name="d9" id="d9"></a>
 
-### 标准盒子模型
+#### 标准盒子模型
 
 [目录](#TOC)
 
@@ -256,9 +274,11 @@ clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
 
 - IE 盒子模型的范围也包括 margin、border、padding、content，和标准 w3c 盒子模型不同的是：ie 盒子模型的 content 部分包含了 border 和 padding。
 
+---
+
 <a name="d10" id="d10"></a>
 
-### 经常遇到的浏览器的兼容性
+#### 经常遇到的浏览器的兼容性
 
 [目录](#TOC)
 
@@ -302,9 +322,11 @@ clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
 
   - 在火狐浏览器、Opera 和 IE11 里，使用 collapse 值的效果就如它的字面意思：table 的行会消失，它的下面一行会补充它的位置。
 
+----
+
 <a name="d11" id="d11"></a>
 
-### 什么是 CSS 预处理器 / 后处理器
+#### 什么是 CSS 预处理器 / 后处理器
 
 [目录](#TOC)
 
