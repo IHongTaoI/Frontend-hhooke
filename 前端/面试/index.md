@@ -16,4 +16,6 @@
 
 - [http 协议](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/面试/http协议.md)
 
-* [常见 js 题目](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/面试/常见js题目.md)
+- [前端架构模式](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/面试/前端架构模式.md)
+
+- [常见 js 题目](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/面试/常见js题目.md)

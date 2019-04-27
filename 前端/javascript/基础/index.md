@@ -2,6 +2,8 @@
 
 - [Js数据类型](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/javascript/基础/Js数据类型.md)
 
+- [你真的不知道的javascript](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/javascript/基础/你真的不知道的javascript.md)
+
 - [作用域(一)](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/javascript/基础/作用域(一).md)
 
 - [作用域(二)---闭包](https://github.com/IHongTaoI/study_everyday_note/blob/master/前端/javascript/基础/作用域(二)---闭包.md)
