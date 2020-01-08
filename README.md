@@ -1,37 +1,33 @@
-# my-page
+# :bookmark: VuePress 搭建个人静态博客网站
 
-#### 介绍
-静态页面仓库
+## :car: 环境
 
-#### 软件架构
-软件架构说明
+- VuePress
+- Node 8+
+- Yarn
+基于VuePress搭建的个人网站，享受 Vue + webpack 的开发体验。
 
+## 简述
 
-#### 安装教程
+记录在不断地学习过程中所记录的笔记
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## :star: Find Me
 
-#### 使用说明
+| :four_leaf_clover:csdn博客 | [博客 Home](https://blog.csdn.net/m0_37903882)              |
+| -------------------------- | ----------------------------------------------------------- |
+| :car:掘金                  | [掘金Home](https://juejin.im/user/5aa1029c51882555770c0603) |
+| :apple:简书                | [简书Home](https://www.jianshu.com/u/6740c2a5866d)          |
+| :beer: ​Github              | [GitHub Home](https://github.com/DuebassLei)                |
+| :bird:码云                 | [Gitee码云](https://gitee.com/DuebassLei)                   |
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+:smile: [海边的小溪鱼个人网站](https://duebasslei.gitee.io/)
 
-#### 参与贡献
+:email: 1130122701@qq.com
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+## 说明
 
+>VuePress 搭建个人博客源码仓库
 
-#### 码云特技
+## 如果觉得文章不错，请我吃颗棒棒糖吧~~
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+![棒棒糖](docs/image/wxPay.png)
