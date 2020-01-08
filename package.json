@@ -1,0 +1,24 @@
+{
+  "name": "ihongtao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IHongTaoI/IHongTaoI.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IHongTaoI/IHongTaoI.github.io/issues"
+  },
+  "homepage": "https://github.com/IHongTaoI/IHongTaoI.github.io#readme"
+}
