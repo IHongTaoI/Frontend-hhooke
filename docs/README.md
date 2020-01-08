@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /javascript.gif
-actionText: 快速浏览 →
+actionText: 快速开始 →
 actionLink: /guide/
 features:
 - title: 小站搭建
