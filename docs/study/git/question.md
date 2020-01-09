@@ -40,7 +40,9 @@
 
   `git push -f origin master`
 
-> 注意：此操作会丢失之前的commit
+::: tip 注意
+此操作会丢失之前的commit
+:::
 
 ### 恢复到之前某个 commit
 

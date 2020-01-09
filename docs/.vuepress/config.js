@@ -18,7 +18,7 @@ module.exports = {
           // { text: 'Javascript', link: '/study/javascript/' },
           // { text: 'Vue', link: '/study/vue/' },
           // { text: 'Docker', link: '/study/docker/' },
-          // { text: 'other', link: '/study/other/' },
+          { text: '填坑指南', link: '/study/other/' },
         ]
       },
       { text: '收藏工具', link: '/favorite/' },
@@ -39,7 +39,7 @@ module.exports = {
       '/study/springboot/': getSBSidebar("Spring", "更多"),
       '/study/springcloud/': getSCSidebar("SpringCloud", "更多"),
       '/study/vue/': getVueSidebar("Vue", "更多"),
-      '/study/other/': getOtherSidebar("随笔", "更多"),
+      '/study/other/': getOtherSidebar("填坑指南", ""),
       '/favorite/': ['']
     },
     base: '/',
@@ -212,14 +212,7 @@ function getOtherSidebar(groupA, groupB) {
       title: groupA,
       collapsable: false,
       children: [
-        ''
-      ]
-    },
-    {
-      title: groupB,
-      collapsable: false,
-      children: [
-        'About'
+        'weixinpub'
       ]
     }]
 }
