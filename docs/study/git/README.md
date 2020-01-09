@@ -6,9 +6,11 @@
 
 - `git clone` 拉取项目代码，不必多说
 
-- `git checkout -b develop`
+- `git branch <分支名>` 创建开发分支
   
-  创建开发分支，一般开发不会在master分支上面。
+  `git checkout <分支名>` 切换到新分支
+
+  `git checkout -b <分支名>` 上面两个命令合为一个。
   
   `git push` 通常创建分支之后就将当前分支提交到远程仓库
 
@@ -16,7 +18,13 @@
 
 - `git diff` 此操作一般借助工具查看文件的修改,个人比较喜欢vscode
 
+- `git add xx` 把xx文件添加到暂存区去
+
 - `git commit .` 提交修改
+
+  `git commit -m '这是注释'` 提交修改并打上注释
+
+  `git commit -am(-a -m)`
 
 - `git fetch --all` 拉取所有远端的最新代码，养成好习惯经常fetch代码
 
@@ -35,3 +43,17 @@
   `-r` 查看所有远程分支
 
   `-a` 查看所有远程分支和本地分支
+
+- `git branch -d <分支名>` 删除本地分支
+
+  `git push origin -d <分支名>` 删除远程分支
+
+- `git branch <分支名>` 创建分支
+
+  `git checkout <分支名>` 切换分支
+
+  `git checkout -b <分支名>` 创建并切换分支
+
+- ### **`git commit --amend`**
+  
+  更改上一次提交，[具体说明](./more.md#git-commit-amend)

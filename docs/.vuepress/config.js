@@ -85,7 +85,7 @@ function getGitSidebar(groupA, groupB) {
       ]
     },
     {
-      title: '更多',
+      title: '',
       collapsable: false,
       children: [
         'more'
