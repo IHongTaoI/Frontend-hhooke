@@ -75,3 +75,54 @@ stash@{0}: On master: 这是备注
 ```
 
 ## :boom: git log
+
+- **默认** `git log`
+
+  无参数。默认不用任何参数的话，git log 会按提交时间列出所有的更新，最近的更新排在最上面。每次更新都有一个 SHA-1 校验和、作者的名字 和 电子邮件地址、提交时间，最后缩进一个段落显示提交说明。
+
+  ![avatar](/hhooke/git/6.png)
+
+- **展开内容差异** `git log -p`
+
+  ![avatar](/hhooke/git/7.png)
+
+- **行数统计** `git log --stat`
+
+  ![avatar](/hhooke/git/8.png)
+
+- **格式化显示** `git log --pretty`
+
+  **简单模式**
+
+  ```key
+    git log --pretty=oneline
+    git log --pretty=short
+    git log --pretty=full
+    git log --pretty=fuller
+  ```
+
+  **定制格式**
+
+  `git log --pretty=format:"%h - %an, %ar : %s"`
+
+| 选项 | 说明                                       |
+|------|--------------------------------------------|
+| %H   | 提交对象（commit）的完整哈希字串           |
+| %h   | 提交对象的简短哈希字串                     |
+| %T   | 树对象（tree）的完整哈希字串               |
+| %t   | 树对象的简短哈希字串                       |
+| %P   | 父对象（parent）的完整哈希字串             |
+| %p   | 父对象的简短哈希字串                       |
+| %an  | 作者（author）的名字                       |
+| %ae  | 作者的电子邮件地址                         |
+| %ad  | 作者修订日期（可以用 -date= 选项定制格式） |
+| %ar  | 作者修订日期，按多久以前的方式显示         |
+| %cn  | 提交者(committer)的名字                    |
+| %ce  | 提交者的电子邮件地址                       |
+| %cd  | 提交日期                                   |
+| %cr  | 提交日期，按多久以前的方式显示             |
+| %s   | 提交说明                                   |
+
+::: tip 参考自
+[git log 的使用](https://www.jianshu.com/p/0805b5d5d893)
+:::
