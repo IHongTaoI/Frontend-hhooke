@@ -15,10 +15,10 @@ module.exports = {
           // { text: 'SpringBoot', link: '/study/springboot/' },
           // { text: 'SpringCloud', link: '/study/springcloud/' },
           // { text: 'Linux', link: '/study/linux/' },
-          // { text: 'Javascript', link: '/study/javascript/' },
+          { text: 'Javascript', link: '/study/javascript/base' },
           // { text: 'Vue', link: '/study/vue/' },
           // { text: 'Docker', link: '/study/docker/' },
-          { text: '填坑指南', link: '/study/other/' },
+          { text: '填坑指南', link: '/study/other/weixinpub' },
         ]
       },
       { text: '收藏工具', link: '/favorite/' },
@@ -118,8 +118,7 @@ function getJavascriptSidebar(groupA, groupB) {
       title: groupA,
       collapsable: false,
       children: [
-        '',
-        'js-tools'
+        'base'
       ]
     },
     {

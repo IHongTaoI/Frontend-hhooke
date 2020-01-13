@@ -73,3 +73,5 @@ stash@{0}: WIP on master: 8422a02 test文件
 PS C:\study\Frontend-hhooke> git stash list
 stash@{0}: On master: 这是备注
 ```
+
+## :boom: git log

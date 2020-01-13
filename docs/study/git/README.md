@@ -55,14 +55,16 @@
 
   `git checkout -b <分支名>` 创建并切换分支
 
-- ### **`git commit --amend`**
+- **`git commit --amend`**
   
   更改上一次提交
 
   [具体说明](./more.md#git-commit-amend)
 
-- ### **`git stash`**
+- **`git stash`**
 
   当我们在开发一个版本的时候，突然上一个版本出了一个bug需要修复。这时候一般的做法就是将当前代码提交一个`commit`然后新建一条分支修改`bug`,但是这样子无非是污染到了`commit`提交信息，因为我们新版本还未开发完。所以 `git stash`就能够解决这个问题
   
   [具体说明](./more.md#git-stash)
+
+- **`git log`**[具体使用](./more.md#git-log)

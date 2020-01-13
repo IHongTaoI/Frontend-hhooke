@@ -6,6 +6,8 @@ sidebar: auto
 ## 文章目录
 
 * :star: [git 学习笔记](../study/git)
+* :star: [javascript](../study/javascript/base)
+* :star: [填坑指南](../study/other/weixinpub)
 
 <!-- * :star: [Java 文章汇总](../study/java/)
 * :star: [SpringBoot 文章汇总](../study/springboot/)
