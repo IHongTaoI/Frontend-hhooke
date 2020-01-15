@@ -1,4 +1,4 @@
-# 更多
+# 更多详情命令
 
 ## :boom: git commit --amend
 
@@ -75,6 +75,8 @@ stash@{0}: On master: 这是备注
 ```
 
 ## :boom: git log
+
+> (我个人反正是不用命令行的方式来查看)
 
 - **默认** `git log`
 

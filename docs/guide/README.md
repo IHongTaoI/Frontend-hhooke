@@ -7,6 +7,7 @@ sidebar: auto
 
 * :star: [git 学习笔记](../study/git)
 * :star: [javascript](../study/javascript/base)
+* :star: [大前端](../study/front/autodeploy)
 * :star: [填坑指南](../study/other/weixinpub)
 
 <!-- * :star: [Java 文章汇总](../study/java/)

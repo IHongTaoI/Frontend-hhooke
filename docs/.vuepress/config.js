@@ -11,7 +11,7 @@ module.exports = {
         text: '学习笔记',
         items: [
           { text: '关于git', link: '/study/git/' },
-          // { text: 'Java', link: '/study/java/' },
+          { text: '大前端', link: '/study/front/autodeploy' },
           // { text: 'SpringBoot', link: '/study/springboot/' },
           // { text: 'SpringCloud', link: '/study/springcloud/' },
           // { text: 'Linux', link: '/study/linux/' },
@@ -32,7 +32,7 @@ module.exports = {
     ],
     sidebar: {
       '/study/git/': getGitSidebar(),
-      '/study/java/': getJavaSidebar("Java", "更多"),
+      '/study/front/': getFrontSidebar("", "更多"),
       '/study/docker/': getDockerSidebar("Docker", "更多"),
       '/study/javascript/': getJavascriptSidebar("Javascript", "更多"),
       '/study/linux/': getLinuxSidebar("Linux", "更多"),
@@ -94,20 +94,15 @@ function getGitSidebar(groupA, groupB) {
   ]
 }
 
-function getJavaSidebar(groupA, groupB) {
+function getFrontSidebar(groupA, groupB) {
   return [
     {
       title: groupA,
       collapsable: false,
       children: [
-        ''
-      ]
-    },
-    {
-      title: groupB,
-      collapsable: false,
-      children: [
-        'About'
+        'autodeploy',
+        'frontdebug',
+        'architects'
       ]
     }
   ]
@@ -118,7 +113,8 @@ function getJavascriptSidebar(groupA, groupB) {
       title: groupA,
       collapsable: false,
       children: [
-        'base'
+        'base',
+        'datastructure',
       ]
     },
     {
@@ -211,7 +207,8 @@ function getOtherSidebar(groupA, groupB) {
       title: groupA,
       collapsable: false,
       children: [
-        'weixinpub'
+        'weixinpub',
+        'browser'
       ]
     }]
 }
