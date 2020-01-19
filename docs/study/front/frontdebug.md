@@ -23,7 +23,7 @@ sidebarDepth: 2
     查看 console.log(...)打印出的日志应该是目前大多数前端惯用的调试方法。但是这种方式对于缕清程序运行的步骤和过程来说是比较困难的。
     比如，我要查看一个函数被调用的位置，这就比较难找出。查看下面代码
 
-    ![1](/hhooke/front/debug1.png)
+    ![1](/front/debug1.png)
 
     我们需要找到 updateMenulist() 被调用了几次，在哪被调用的。当然，被调用了几次我们很容易查看，只需要在函数内打印一下即可。
 
@@ -35,18 +35,18 @@ sidebarDepth: 2
 
     浏览器控制台中就会显示出来
 
-    ![1](/hhooke/front/debug2.png)
+    ![1](/front/debug2.png)
 
     但是我们想知道它是在哪里被调用的，这时我们会想到，直接在文件夹里搜索这个函数不就可以了吗，如
 
-    ![1](/hhooke/front/debug3.png)
+    ![1](/front/debug3.png)
 
     搜索到的结果是有 4 个地方调用了这个函数，但是控制台里只打印了两次，那么，继续往下看。
 
   - **trace(...)**
     这个 console.trace()的概述是：向 Web 控制台输出一个堆栈跟踪。意思就是打印当前执行位置到 console.trace()的路径信息.使用 console.trace()可以打印出详细的调用堆栈：
-    ![1](/hhooke/front/debug4.png)
-    ![1](/hhooke/front/debug5.png)
+    ![1](/front/debug4.png)
+    ![1](/front/debug5.png)
 
   - **table(...)**（此处摘抄至别的文章）
     我们经常会遇到这样的场景：获取到一个用户列表，每个用户有很多属性，但是我们只想查看其中的某些属性，在用 console.log 打印出来的时候需要把每个用户对象展开一个个查看，非常麻烦。而 console.table 完美的解决这个问题
@@ -59,31 +59,31 @@ sidebarDepth: 2
 
   之前我们 console.log()打印的时候，后面会出现打印的具体文件位置。
 
-  ![1](/hhooke/front/debug6.png)
+  ![1](/front/debug6.png)
 
   点击之后会跳到这个文件的具体位置。之后点击我箭头所指的位置就断点了
 
-  ![1](/hhooke/front/debug7.png)
+  ![1](/front/debug7.png)
 
   之后就可以按 F5 刷新断点调试了，程序运行到这个地方会被卡住，然后你就可以查看当前的环境中的一些信息，如下
 
-  ![1](/hhooke/front/debug8.png)
+  ![1](/front/debug8.png)
 
   查看调用栈
 
-  ![1](/hhooke/front/debug9.png)
+  ![1](/front/debug9.png)
 
   我们可以很明显的查看函数第一次是在 main.js 的 34 行调用的。
 
   然后我们可以按下 F11 或者：
 
-  ![1](/hhooke/front/debug10.png)
+  ![1](/front/debug10.png)
 
   于是我们再次点击，就又跳到了第二次执行这个函数的地方。
 
-  ![1](/hhooke/front/debug11.png)
-  ![1](/hhooke/front/debug12.png)
-  ![1](/hhooke/front/debug13.png)
+  ![1](/front/debug11.png)
+  ![1](/front/debug12.png)
+  ![1](/front/debug13.png)
 
 - **代码中的断点**
 
@@ -93,7 +93,7 @@ sidebarDepth: 2
 
   在代码中直接使用 debugger 关键字可以快速的实现断点。
 
-  ![1](/hhooke/front/debug14.png)
+  ![1](/front/debug14.png)
 
   效果和浏览器中的断点效果是一样的。
 
@@ -126,7 +126,7 @@ sidebarDepth: 2
 
     点击 F5 或者：
 
-    ![1](/hhooke/front/debug15.png)
+    ![1](/front/debug15.png)
 
     关于 vscode 调试的 查阅 [官方文档](https://go.microsoft.com/fwlink/?linkid=830387)， 一般是进行服务端后台开发的用 vscode 调试的比较多。
 
@@ -134,21 +134,21 @@ sidebarDepth: 2
 
   首先，下载 vscode 插件
 
-  ![1](/hhooke/front/debugc.png)
+  ![1](/front/debugc.png)
 
   然后点击调试按钮
 
-  ![1](/hhooke/front/debug16.png)
+  ![1](/front/debug16.png)
 
   找到你的项目添加配置
 
-  ![1](/hhooke/front/debug17.png)
+  ![1](/front/debug17.png)
 
   如我的是 MyApp，点击添加
 
   然后会跳到一个文件里
 
-  ![1](/hhooke/front/debug18.png)
+  ![1](/front/debug18.png)
 
   将 url 改成你的项目开发环境调试的地址，
   然后 驱动项目 一般的启动命令配置都是 npm run dev，具体的启动命令自行查看 package.json 文件中。
@@ -163,11 +163,11 @@ sidebarDepth: 2
 
   如我写的一个后台管理的 vue 页面。启动项目后。
 
-  ![1](/hhooke/front/debug19.png)
+  ![1](/front/debug19.png)
 
   然后按 f12 打开开发者工具，找到我们工具栏中的 vue 选项。于是乎便能清晰的看到我们的 vue 组件。
 
-  ![1](/hhooke/front/debug20.png)
+  ![1](/front/debug20.png)
 
 ## 三.DOM 调试
 
@@ -201,11 +201,11 @@ sidebarDepth: 2
 
   在浏览器中打开文件，然后按 f12 找到 sources 选项卡，比如我要监听点击事件。选择 mouse 将 click 打上钩。
 
-  ![1](/hhooke/front/debug21.png)
+  ![1](/front/debug21.png)
 
   然后我们测试点击事件。便可以发现事件被拦截了。
 
-  ![1](/hhooke/front/debug22.png)
+  ![1](/front/debug22.png)
 
 - ### 2.Dom breakpoints
 
@@ -215,11 +215,11 @@ sidebarDepth: 2
 
   此处我举个 node removal 的例子
 
-  ![1](/hhooke/front/debug23.png)
+  ![1](/front/debug23.png)
 
   当我们点击测试点击的时候，会将一个 DOM 给删除。于是会在删除的代码中实现断点
 
-  ![1](/hhooke/front/debug24.png)
+  ![1](/front/debug24.png)
 
 ## 三.ajax 请求调试
 
@@ -229,7 +229,7 @@ sidebarDepth: 2
 
   这几年前端开发发生了翻天覆地的变化，从当初的名不见经传到如今的盛极一时，Ajax 驱动 Web 富应用，移动 WebApp 单页应用风生水起。这一切都离不开 XMLHttpRequest 对象，而“XHR Breakpoints”正是专为异步而生的断点调试功能。
 
-  ![1](/hhooke/front/debug25.png)
+  ![1](/front/debug25.png)
 
   我们可以通过“XHR Breakpoints”右侧的“+”号为异步断点添加断点条件，当异步请求触发时的 URL 满足此条件，JS 逻辑则会自动产生断点。演示动画中并没有演示到断点位置，这是因为，演示使用的是 jQuery 封装好的 ajax 方法，代码已经过压缩，看不到什么效果，而事实上 XHR 断点的产生位置是”xhr.send()”语句。
 
@@ -239,10 +239,10 @@ sidebarDepth: 2
 
   使用 Chrome DevTools 的 performance 面板可以记录和分析页面在运行时的所有活动。
 
-  ![1](/hhooke/front/debug26.png)
+  ![1](/front/debug26.png)
 
   在火焰图上看到的圈起来的三条虚线，分别是:
 
-  - 蓝线代表 DOMContentLoaded 事件。
-  - 绿线代表首次绘制的时间。
-  - 红线代表 load 事件。
+- 蓝线代表 DOMContentLoaded 事件。
+- 绿线代表首次绘制的时间。
+- 红线代表 load 事件。
