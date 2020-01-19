@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/hhooke/',
+  base: '/',
   dest: './page',
   title: '洪涛的传奇生涯',
   description: "技术只是浮云，生活才是真正的追求。我们要做的就是好好生活顺便把事干好。",

@@ -4,15 +4,15 @@
 
 改写提交，例如目前我有一个刚刚提交的更改，这时候我发现少打了一个字符，需要更改这个提交这时候我们就可以更改这个提交
 
-![avatar](/hhooke/git/1.png)
+![avatar](/git/1.png)
 
 修改好test.md文件后
 
-![avatar](/hhooke/git/2.png)
+![avatar](/git/2.png)
 
 这时候查看 git 日子 发现之前的 `一个提交` 已经被替换成了 `这是一个新的提交`
 
-![avatar](/hhooke/git/3.png)
+![avatar](/git/3.png)
 
 ## :boom: git stash
 
@@ -52,11 +52,11 @@
 
 当前我的git信息
 
-![avatar](/hhooke/git/4.png)
+![avatar](/git/4.png)
 
 当前我的分支修改状态 一个改动的文件，一个新增的文件
 
-![avatar](/hhooke/git/5.png)
+![avatar](/git/5.png)
 
 如果我们直接执行 `git stash` 新增的文件`testNew.md`是不会被添加进去的，需要执行 `git stash -a` 方可将两个文件都缓存进去
 
@@ -82,15 +82,15 @@ stash@{0}: On master: 这是备注
 
   无参数。默认不用任何参数的话，git log 会按提交时间列出所有的更新，最近的更新排在最上面。每次更新都有一个 SHA-1 校验和、作者的名字 和 电子邮件地址、提交时间，最后缩进一个段落显示提交说明。
 
-  ![avatar](/hhooke/git/6.png)
+  ![avatar](/git/6.png)
 
 - **展开内容差异** `git log -p`
 
-  ![avatar](/hhooke/git/7.png)
+  ![avatar](/git/7.png)
 
 - **行数统计** `git log --stat`
 
-  ![avatar](/hhooke/git/8.png)
+  ![avatar](/git/8.png)
 
 - **格式化显示** `git log --pretty`
 
