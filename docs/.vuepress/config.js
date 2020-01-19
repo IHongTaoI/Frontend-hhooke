@@ -102,7 +102,14 @@ function getFrontSidebar(groupA, groupB) {
       children: [
         'autodeploy',
         'frontdebug',
-        'architects'
+        'architects',
+        {
+          title: '更多',
+          collapsable: true,
+          children: [
+            'pm2prac.md'
+          ]
+        }
       ]
     }
   ]
