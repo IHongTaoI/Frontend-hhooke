@@ -122,6 +122,7 @@ function getJavascriptSidebar(groupA, groupB) {
       children: [
         'base',
         'datastructure',
+        'interviewer'
       ]
     },
     {
